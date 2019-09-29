@@ -1,0 +1,37 @@
+{
+    "rasa_nlu_data": {
+        "entity_synonyms":[{
+            "value": "New York City",
+            "synonyms": ["NYC", "nyc", "the big apple"]
+          }
+        ],
+        "lookup_tables": [
+            {
+                "name": "plates",
+                "elements": "data/test/lookup_tables/plates.txt"
+            },
+            {
+                "name": "plates",
+                "elements": ["beans", "rice", "tacos", "cheese"]
+            }
+        ],
+        "regex_features":[{
+            "name": "zipcode",
+            "pattern": "[0-9]{5}"
+        }],
+        "common_examples": [
+            {
+              "text": "show me chinese restaurants",
+              "intent": "restaurant_search",
+              "entities": [
+                {
+                  "start": 8,
+                  "end": 15,
+                  "value": "chinese",
+                  "entity": "cuisine"
+                }
+              ]
+            }
+        ]
+    }
+}

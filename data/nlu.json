@@ -1,0 +1,111 @@
+{
+    "rasa_nlu_dada":{
+        "entity_synonyms":[],
+        "lookup_tables":[],
+        "regex_features":[],
+        "common_examples":[
+            {
+                "text":"您好",
+                "intent": "greet",
+                "entities":[]
+            },
+            {
+                "text":"你好",
+                "intent": "greet",
+                "entities":[]
+            },
+            {
+                "text":"在吗？",
+                "intent": "greet",
+                "entities":[]
+            },
+            {
+                "text":"在吗",
+                "intent": "greet",
+                "entities":[]
+            },
+            {
+                "text":"再见",
+                "intent": "goodbye",
+                "entities":[]
+            },
+            {
+                "text":"拜拜",
+                "intent": "goodbye",
+                "entities":[]
+            },
+            {
+                "text":"帮我查询火车票",
+                "intent": "search_service",
+                "entities":[
+                    {
+                        "start": 4,
+                        "end": 7,
+                        "value": "火车票",
+                        "entity": "ticket"
+                    }
+                ]
+            },
+            {
+                "text":"帮我查询火车",
+                "intent": "search_service",
+                "entities":[
+                    {
+                        "start": 4,
+                        "end": 6,
+                        "value": "火车",
+                        "entity": "ticket"
+                    }
+                ]
+            },
+            {
+                "text":"帮我查询高铁票",
+                "intent": "search_service",
+                "entities":[
+                    {
+                        "start": 4,
+                        "end": 7,
+                        "value": "高铁票",
+                        "entity": "ticket"
+                    }
+                ]
+            },
+            {
+                "text":"帮我查询动车票",
+                "intent": "search_service",
+                "entities":[
+                    {
+                        "start": 4,
+                        "end": 7,
+                        "value": "动车票",
+                        "entity": "ticket"
+                    }
+                ]
+            },
+            {
+                "text":"帮我查询高铁",
+                "intent": "search_service",
+                "entities":[
+                    {
+                        "start": 4,
+                        "end": 6,
+                        "value": "高铁",
+                        "entity": "ticket"
+                    }
+                ]
+            },
+            {
+                "text":"帮我查询动车",
+                "intent": "search_service",
+                "entities":[
+                    {
+                        "start": 4,
+                        "end": 6,
+                        "value": "动车",
+                        "entity": "ticket"
+                    }
+                ]
+            }
+        ]
+    }
+}

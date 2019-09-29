@@ -1,0 +1,69 @@
+slots:
+  ticket:
+    type: text
+  weather:
+    type: text
+  time:
+    type: text
+  address:
+    type: text
+  phone_number:
+    type: text
+  id_card:
+    type: text
+  outset:
+    type: text
+  destination:
+    type: text
+
+
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- search_service
+
+entities:
+  - ticket
+  - weather
+  - time
+  - address
+  - phone_number
+  - id_card
+  - outset
+  - destination
+
+
+templates:
+  utter_greet:
+  - text: 主人，有什么可以帮您的！！
+  utter_ask_time:
+  - text: 主人，你想查询那一天的{_type}呢?
+  utter_ask_route:
+  - text: 主人，你想查询从{outset}到{outset}的{_type}呢？
+  utter_ask_address:
+  - text: 主人， 你想查询哪里的{_type}呢？
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great carry on!
+  utter_goodbye:
+  - text: 好哒，主人再见
+  utter_default:
+  - text: I dont know you say
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_ask_time
+- utter_ask_address
+- utter_ask_route
+- action_customize_default_fallback

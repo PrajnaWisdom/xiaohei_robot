@@ -1,0 +1,25 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: "zh"
+pipeline: supervised_embeddings
+
+
+# - name: "MitieNLP"
+#   model: "data/total_word_feature_extractor_zh.dat"
+# - name: "JiebaTokenizer"
+# - name: "MitieEntityExtractor"
+# - name: "EntitySynonymMapper"
+# - name: "RegexFeaturizer"
+# - name: "MitieFeaturizer"
+# - name: "SklearnIntentClassifier"
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: FallbackPolicy
+    fallback_action_name: 'action_customize_default_fallback'
+    nlu_threshold: 0.5
+    core_threshold: 0.3
+  - name: MemoizationPolicy
+  - name: KerasPolicy
+  - name: MappingPolicy
